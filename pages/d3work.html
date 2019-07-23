@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8">
+    </script>
+    <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+  </head>
+  <body>
+    <svg width="50" height="50">
+      <circle cx="25" cy="25" r="25" style="fill:green" />
+    </svg><br>
+    <p>Creating A graph Using D3.JS</p>
+    <script type="text/javascript">
+          d3.select("body")
+            .append("svg")
+            .append("rect")
+            .attr("width",50)
+            .attr("height",200)
+            .style("fill", "blue");
+    </script>
+    <p>Using Pure D3 Functions </p>
+    <script type="text/javascript">
+         var w = 400;
+         var h = 200;
+         var padding = 2;
+         var dataset = [5,34,15,17,25,30,35,20];
+
+         //function for color picker
+         function colorPicker(v){
+           if( v <= 5){
+             return "#D1D7E8";
+           }else if (v > 5 && v <= 10) {
+             return "#756767";
+           }else if(v > 15 && v <= 20){
+             return "#E6CAF1";
+           }else if(v > 20 && v <= 30){
+             return "#2D0CE8";
+           }else if(v > 30 && v <= 35){
+             return "#EB2631";
+           }
+         }
+
+         var svg = d3.select("body")
+                     .append("svg")
+                     .attr("width",w)
+                     .attr("height",h)
+
+         svg.selectAll("rect")
+            .data(dataset)
+            .enter()
+            .append("rect")
+              .attr("x", function(d, i){
+                   return (i * (w / dataset.length));
+              })
+              .attr("y", function(d){
+                   return h - (d * 4);
+              })
+              .attr("width", w / dataset.length - padding)
+
+              .attr("height", function(d){
+                   return (d * 4);
+              })
+              .attr("fill", function(d){
+                 // return "rgb(0, " + (d*10) + ", 0";
+                 return colorPicker(d);
+              });
+
+          svg.selectAll("text")
+             .data(dataset)
+             .enter()
+             .append("text")
+             .text(function(d){
+               return d;
+             })
+             .attr({
+               "text-anchor": "middle",
+               x: function(d, i){
+                 return i * (w/dataset.length)+(w/dataset.length - padding) / 2;
+               },
+               y: function(d){
+                 return h - (d * 4)+14;
+               },
+               "font-family":"sans-serif",
+               "font-size":12,
+               "fill": "white"
+             });
+
+    </script>
+  </body>
+</html>

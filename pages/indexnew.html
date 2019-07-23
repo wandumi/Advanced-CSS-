@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+        const color = [
+           'red', 'green', 'blue'
+        ];
+
+        /*const items = color.map(function(item){
+          return '<li>'+ item + '</li>';
+        });*/
+
+        //const item = color.map(item => '<li>'+ item + '</li>');
+
+        const items = color.map(item => `<li>${color}</li>`);
+
+        console.log(items);
+
+        .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+            color: #fff;
+            background-color: #007bff;
+        }
+
+    </script>
+  </body>
+</html>

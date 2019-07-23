@@ -1,0 +1,28 @@
+.section-about {
+    background-color: $color-grey-light-1;
+    padding: 25rem 0;
+    margin-top: -20vh;
+}
+
+.section-features {
+    padding: 20rem 0;
+    background-image: linear-gradient( to right bottom, 
+    rgba($color-top-header-first, 0.8), 
+    rgba($color-top-header-second, 0.8)),
+     url(../images/aboutrpc.jpg);
+     background-size: cover;
+     margin-top: -10rem;
+
+     transform: skewY(-7deg);
+
+     & > * {
+        transform: skewY(7deg); 
+     }
+}
+
+.section-packages {
+    background-color: $color-grey-light-1;
+    padding: 30rem 0 10rem 0;
+    margin-top: -20vh;
+}
+

@@ -1,0 +1,73 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /*font-size: 16px;*/
+    line-height: 1.7;
+    color: $color-secondary;
+    padding: .5rem;
+}
+
+.heading-primary {
+    color: $color-secondary;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+    &--top {
+        display: block;
+        font-size: 2rem;
+        font-weight: 400;
+        letter-spacing: 1.7rem;
+        text-align: center;
+    }
+    &--main {
+        display: block;
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: .17rem;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-delay: 3s;
+        /* animation-iteration-count: 3s;
+     animation-timing-function: ease-in-out;*/
+    }
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 400;
+        letter-spacing: 1.74rem;
+        text-align: center;
+        animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-delay: 3s;
+    }
+}
+
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-top-header-first, $color-top-header-second);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all 2s;
+    &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($color-secondary, 0.2);
+    }
+    margin-bottom: 8rem;
+}
+
+.heading-tertiary {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}

@@ -1,0 +1,33 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient( to right, $color-top-header-first, $color-top-header-second), url(../images/rpchome.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    
+    &__logo-box {
+        position: absolute;
+        top: 8rem;
+        left: 40rem;
+    }
+    &__logo {
+        position: absolute;
+        top: 5rem;
+        left: 5rem;
+        height: 8rem;
+    }
+    &__logo:hover {
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-delay: 1s;
+    }
+    &__text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}

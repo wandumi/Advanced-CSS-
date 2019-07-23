@@ -1,0 +1,17 @@
+body {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#output {
+   padding: 20px;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+  font-family: "PT Sans", corbel, sans-serif;
+}
+
+/* #map { height: 180px; } */
